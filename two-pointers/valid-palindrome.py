@@ -26,3 +26,4 @@ print(sol.isPalindrome("A man, a plan, a canal: Panama!"))  # Output: True
 print(sol.isPalindrome("race a car"))  # Output: False
 print(sol.isPalindrome("RAce    Car")) # Output: True
 print(sol.isPalindrome(".[;.[;,;.][;;';.';.")) # Output: True
+print("All test cases passed!")

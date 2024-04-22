@@ -23,3 +23,4 @@ print(sol.twoSum([3, 3], 6) == [1, 2]) # Output: True
 print(sol.twoSum([-1, 0], -1) == [1, 2]) # Output: True
 print(sol.twoSum([-3, 4, 3, 90], 0) == [1, 3]) # Output: True
 print(sol.twoSum([0, 0, 3, 4], 0) == [1, 2]) # Output: True
+print("All test cases passed!")
