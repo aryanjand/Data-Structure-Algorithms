@@ -13,6 +13,8 @@ class Solution:
 
         return map_s == map_t
 
+    # In order for the array solution
+    # to haddle unicode we need close 150,000 slots
     def isAnagram_lowercase(self, s: str, t: str) -> bool:
         if len(s) != len(t):
             return False
