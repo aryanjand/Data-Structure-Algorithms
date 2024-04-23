@@ -8,16 +8,17 @@ class ListNode:
 
 class Solution:
     def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
-        previous = None
         current = head
+        previous = None
 
+        # Traverse the original list
         while current:
+            next = current.next  # Save the next node before changing the pointer
+            current.next = previous  # Reverse the pointer to the previous node
+            previous = current  # Move the previous pointer to the current node
+            current = next  # Move the current pointer to the next node
 
-            next = current.next
-            current.next = previous
-            previous = current
-            current = next
-
+        # Return the new head of the reversed list
         return previous
 
 def create_linked_list(values):

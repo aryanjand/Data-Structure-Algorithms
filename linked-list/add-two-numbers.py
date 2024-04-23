@@ -15,8 +15,8 @@ class Solution:
             l1_val = l1.val if l1 else 0
             l2_val = l2.val if l2 else 0
 
-            remainder = (l1_val + l2_val + carry) % 10
-            carry = (l1_val + l2_val + carry) // 10
+            remainder = (l1_val + l2_val + carry) % 10 # Calculate the remainder of the sum of current digits and the carry
+            carry = (l1_val + l2_val + carry) // 10 # Calculate the new carry for the next iteration
             current.next = ListNode(remainder)
 
             current = current.next
