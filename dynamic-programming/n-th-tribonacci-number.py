@@ -2,7 +2,6 @@ class Solution:
     def tribonacci(self, n: int) -> int:
         # Initialize the first three Tribonacci numbers
         t = [0, 1, 1]
-
         # Return the first three numbers directly
         if n < 3:
             return t[n]

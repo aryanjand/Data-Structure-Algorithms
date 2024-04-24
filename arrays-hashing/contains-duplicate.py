@@ -34,7 +34,6 @@ def test_contains_duplicate():
     nums5 = list(range(1000))
     assert solution.containsDuplicate(nums5) == False
 
-
 # Run the test cases
 test_contains_duplicate()
 print("All test cases passed!")
