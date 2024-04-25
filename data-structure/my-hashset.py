@@ -20,7 +20,8 @@ class MyHashSet:
     def remove(self, key: int) -> None:
         index = key % len(self.set)
         node = self.set[index]
-        while node and node.next:
+        while node and node.next: # If we remove the last node, node.next becomes None,
+        # and accessing node.next would raise an AttributeError of 'NoneType'.
             if key == node.next.key:
                 node.next = node.next.next
             node = node.next
