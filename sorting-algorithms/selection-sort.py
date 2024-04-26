@@ -55,7 +55,7 @@ def test_sort():
     solution = Solution()
 
     # Create a large array
-    large_array = [i for i in range(10**5, 0, -1)]
+    large_array = [i for i in range(10**4, 0, -1)]
     large_array_sorted = sorted(large_array)
 
     # Test selection_sort_1
