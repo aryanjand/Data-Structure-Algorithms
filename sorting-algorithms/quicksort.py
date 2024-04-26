@@ -42,7 +42,7 @@ class Solution:
         Stable: No
         Method: Partitioning
 
-         Quicksort is a divide-and-conquer algorithm that divides the input list into two partitions,
+        Quicksort is a divide-and-conquer algorithm that divides the input list into two partitions,
         recursively sorts the partitions, and then combines the sorted partitions.
         This process continues until the entire list is sorted.
         """

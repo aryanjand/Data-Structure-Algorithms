@@ -63,6 +63,10 @@ def test_sort():
     super_large_array = [i for i in range(10**5, 0, -1)]
     super_large_array_sorted = sorted(super_large_array)
 
+    # Create a super large array
+    super_super_large_array = [i for i in range(10**6, 0, -1)]
+    super_super_large_array_sorted = sorted(super_super_large_array)
+
     # Test merge sort
     assert solution.merge_sort([]) == []
     assert solution.merge_sort([3, 5, 3, 6, 5, 7, 7, 6, 8]) == [3, 3, 5, 5, 6, 6, 7, 7, 8]
@@ -77,8 +81,15 @@ def test_sort():
     end_time = time.time()
     print(f"Merge Sort took {end_time - start_time:.2f} seconds to sort the super large array")
 
+    # Test super super large array
+    start_time = time.time()
+    sorted_array_3 = solution.merge_sort(super_super_large_array.copy())
+    end_time = time.time()
+    print(f"Merge Sort took {end_time - start_time:.2f} seconds to sort the SUPER SUPER LARGE ARRAY!")
+
     assert sorted_array_1 == large_array_sorted
     assert sorted_array_2 == super_large_array_sorted
+    assert sorted_array_3 == super_super_large_array_sorted
 
 test_sort()
 print("All Test Cases Passed!")
