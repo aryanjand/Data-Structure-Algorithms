@@ -33,7 +33,7 @@ class Solution:
 
 
 
-def test_mySqrt_brute_force():
+def test_mySqrt():
     solution = Solution()
     assert solution.mySqrt_brute_force(0) == 0
     assert solution.mySqrt_brute_force(1) == 1
@@ -56,5 +56,5 @@ def test_mySqrt_brute_force():
     assert solution.mySqrt_optimal(17) == 4
     assert solution.mySqrt_optimal(2147395599) == 46339
 
-test_mySqrt_brute_force()
+test_mySqrt()
 print("All Test Cases Passed!")
