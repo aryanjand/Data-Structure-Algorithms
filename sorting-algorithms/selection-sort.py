@@ -15,8 +15,8 @@ class Solution:
         This process continues until all elements are sorted.
         """
         sorted_nums = []
-        len_nums = len(nums)
-        for _ in range(len_nums):
+        length = len(nums)
+        for _ in range(length):
             min_val = float('inf')
             min_idx = -1
             for idx, num in enumerate(nums):
@@ -40,11 +40,11 @@ class Solution:
         It iterates through the list, selecting the minimum element from the unsorted portion and swapping it with the first unsorted element.
         The process continues until all elements are sorted.
         """
-        len_nums = len(nums)
-        for i in range(len_nums - 1): # We need to do n-2 passes
+        length = len(nums)
+        for i in range(length - 1): # We need to do n-2 passes
         # elements from i till n-1 are candidates
             min_index = i
-            for j in range(i + 1, len_nums): # Check the unsorted portion of the list
+            for j in range(i + 1, length): # Check the unsorted portion of the list
                 if (nums[j] < nums[min_index]): # find the index of the minimum element
                     min_index = j
             nums[i], nums[min_index] = nums[min_index], nums[i]

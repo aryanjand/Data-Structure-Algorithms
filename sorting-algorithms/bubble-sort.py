@@ -12,10 +12,10 @@ class Solution:
         Bubble sort repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order.
         The pass through the list is repeated until the list is sorted.
         """
-        len_nums = len(nums)
-        for k in range(len_nums):
+        length = len(nums)
+        for k in range(length):
             is_sorted = True
-            for i in range(len_nums - 1):
+            for i in range(length - 1):
                 if nums[i] > nums[i + 1]:
                     nums[i], nums[i + 1] = nums[i + 1], nums[i] # Swap the elements
                     is_sorted = False
