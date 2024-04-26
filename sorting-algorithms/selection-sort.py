@@ -56,6 +56,7 @@ def test_sort():
 
     # Create a large array
     large_array = [i for i in range(10**5, 0, -1)]
+    large_array_sorted = sorted(large_array)
 
     # Test selection_sort_1
     assert solution.selection_sort_1([]) == []
@@ -65,7 +66,7 @@ def test_sort():
     sorted_array_1 = solution.selection_sort_1(large_array.copy())
     end_time = time.time()
     print(f"Selection Sort 1 took {end_time - start_time:.2f} seconds to sort the large array")
-    assert sorted_array_1 == sorted(large_array)
+    assert sorted_array_1 == large_array_sorted
 
     # Test selection_sort_2
     assert solution.selection_sort_2([]) == []
@@ -75,7 +76,7 @@ def test_sort():
     sorted_array_2 = solution.selection_sort_2(large_array.copy())
     end_time = time.time()
     print(f"Selection Sort 2 took {end_time - start_time:.2f} seconds to sort the large array")
-    assert sorted_array_2 == sorted(large_array)
+    assert sorted_array_2 == large_array_sorted
 
 
 
