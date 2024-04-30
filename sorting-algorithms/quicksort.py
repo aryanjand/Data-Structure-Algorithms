@@ -24,7 +24,7 @@ class Solution:
         # Partition the subarray around the pivot
         partition_index = start_index  # Index of the smaller element
         for current_index in range(start_index, end_index):
-            if nums[current_index] < pivot_value:
+            if nums[current_index] <= pivot_value:
                 nums[current_index], nums[partition_index] = nums[partition_index], nums[current_index]
                 partition_index += 1
 
@@ -47,7 +47,8 @@ class Solution:
         This process continues until the entire list is sorted.
         """
         length = len(nums)
-        def sort(nums: List[int], start_index: int, end_index: int) -> List[int]:
+        def sort(nums: List[int], start_index: int, end_index: int):
+            # check if indexes are valid
             if start_index < end_index:
                 # partition_index = self.partition_1(nums, start_index, end_index)
                 partition_index = self.partition_2(nums, start_index, end_index)
@@ -72,6 +73,9 @@ def test_sort():
     super_super_large_array = [i for i in range(10**6, 0, -1)]
     super_super_large_array_sorted = sorted(super_super_large_array)
 
+    n_squared_array = [i for i in range(10**6, 0, -1)]
+    n_squared_array_sorted = sorted(n_squared_array)
+
     # Test quicksort
     assert solution.quicksort([]) == []
     assert solution.quicksort([3, 5, 3, 6, 5, 7, 7, 6, 8]) == [3, 3, 5, 5, 6, 6, 7, 7, 8]
@@ -95,9 +99,18 @@ def test_sort():
     end_time = time.time()
     print(f"Quicksort took {end_time - start_time:.2f} seconds to sort the SUPER SUPER LARGE ARRAY!")
 
+
+    # Test super super large array
+    start_time = time.time()
+    sorted_array_4 = solution.quicksort(n_squared_array.copy())
+    end_time = time.time()
+    print(f"Quicksort took {end_time - start_time:.2f} seconds to sort the Reversed Sorted Array!")
+
+
     assert sorted_array_1 == large_array_sorted
     assert sorted_array_2 == super_large_array_sorted
     assert sorted_array_3 == super_super_large_array_sorted
+    assert sorted_array_4 == n_squared_array_sorted
 
 test_sort()
 print("All Test Cases Passed!")
