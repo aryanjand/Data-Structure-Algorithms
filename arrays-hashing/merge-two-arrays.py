@@ -3,10 +3,22 @@ from typing import List
 class Solution:
     def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:
         """
-        Do not return anything, modify nums1 in-place instead.
-        This problem involves starting from the last element of nums1 and nums2 and comparing them,
-        placing the larger of the two at the end of nums1, and then moving the indices backwards.
-        This is repeated until all elements from nums2 are merged into nums1.
+        Merge two sorted arrays nums1 and nums2 into nums1. Do not return anything, modify nums1 in-place instead.
+
+        Approach:
+        Start from the end of both arrays since nums1 has enough space to hold all elements.
+        Compare elements from nums1 and nums2, and place the larger element at the end of nums1.
+
+        Steps:
+        1. Initialize 'last' pointer to m + n - 1, 'm_index' to m - 1, and 'n_index' to n - 1.
+        2. While both m and n are greater than 0, compare nums1[m_index] and nums2[n_index].
+            - If nums1[m_index] is greater, place it at nums1[last] and decrement m and m_index.
+            - If nums2[n_index] is greater, place it at nums1[last] and decrement n and n_index.
+            - Decrement last.
+        3. If there are remaining elements in nums2, place them in nums1 starting from the beginning.
+
+        Time complexity: O(m + n)
+        Space complexity: O(1)
         """
         last = m + n - 1
         m_index, n_index = m - 1, n - 1

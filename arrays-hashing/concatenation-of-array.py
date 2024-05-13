@@ -49,4 +49,6 @@ def test_getConcatenation():
     assert solution.getConcatenation_solution_3(nums[:], 1) == nums + nums
 
 test_getConcatenation()
+# I think this question can be asked to see how can you optimize code.
+# The interview can ask this to see if you had concatenate N times.
 print("All Test Cases Passed!")

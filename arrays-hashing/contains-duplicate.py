@@ -2,6 +2,9 @@ from typing import List
 
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
+        # There are really 2 ways to solve this question,
+        # The we could do by comparing each element with ever other element but that
+        # would result in time complexity n^2 to avoid that we use a set that can grow to the size of the input.
         exists = set()
 
         for i in range(len(nums)):

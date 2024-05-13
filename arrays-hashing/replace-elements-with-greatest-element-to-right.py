@@ -2,6 +2,11 @@ from typing import List
 
 class Solution:
     def replaceElements(self, array: List[int]) -> List[int]:
+        """
+        Problem:
+            Given an array, replace every element in that array with the greatest element
+            among the elements to its right, and replace the last element with -1.
+        """
         # reverse the array
         array = array[::-1] # O(N)
         # We know initail max is -1
