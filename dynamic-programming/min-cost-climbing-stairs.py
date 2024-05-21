@@ -79,7 +79,7 @@ if __name__ == '__main__':
     print("All Test Cases Passed!")
 
 class TestSolution(unittest.TestCase):
-    def __init__(self):
+    def setUp(self):
         self.solution = Solution()
 
     def test_minCostClimbingStairs(self):
