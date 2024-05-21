@@ -21,6 +21,9 @@ class Solution:
             - We can determine if an element is a duplicate or unique by comparing it with the previous index.
             - There is no need to swap elements because we only care about the first k elements.
         """
+        if not nums:
+            return 0
+
         length_nums = len(nums)
         left, right = 1, 1
 
@@ -31,10 +34,6 @@ class Solution:
             right += 1
 
         return left
-
-
-if __name__ == '__main__':
-    unittest.main(argv=[''], exit=False)
 
 class TestRemoveDuplicates(unittest.TestCase):
     def setUp(self):
@@ -52,3 +51,7 @@ class TestRemoveDuplicates(unittest.TestCase):
         nums3 = []
         self.assertEqual(self.solution.removeDuplicates(nums3), 0)
         self.assertEqual(nums3, [])
+
+if __name__ == '__main__':
+    unittest.main(argv=[''], exit=False)
+    print("All Test Cases Passed!")
