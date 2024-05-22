@@ -30,14 +30,8 @@ class Solution:
                 previous.next = current.next
             else:
                 previous = current
-
             current = current.next
-
         return dummy.next
-
-if __name__ == '__main__':
-    unittest.main(argv=[''], exit=False)
-    print("All Test Cases Passed!")
 
 class RemoveElementsTest(unittest.TestCase):
     def test_remove_linked_list_elements(self):
@@ -63,3 +57,7 @@ class RemoveElementsTest(unittest.TestCase):
         current = new_head
         while current:
             self.assertNotEqual(current.val, 6, "List should remain unchanged")
+
+if __name__ == '__main__':
+    unittest.main(argv=[''], exit=False)
+    print("All Test Cases Passed!")
